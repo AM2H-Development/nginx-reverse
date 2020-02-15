@@ -22,6 +22,7 @@ services:
       
 volumes:
   theia_data:
+  nginx_config:
   
 networks:
   reverse-proxy:

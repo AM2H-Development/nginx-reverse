@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  theia:
+    image: " theiaide/theia:latest"
+    restart: unless-stopped
+    volumes:
+      - theia_data:/home/project:cached
+    networks:
+      reverse-proxy:
+        aliases:
+          - theia
+
+  nginx:
+    image: "nginx:stable-alpine"
+    restart: unless-stopped
+    ports:
+      - "8188:80"
+    networks:
+      - reverse-proxy
+      
+volumes:
+  theia_data:
+  
+networks:
+  reverse-proxy:

@@ -11,7 +11,7 @@ services:
           - theia
 
   nginx:
-    image: "nginx:stable-alpine"
+    image: "am2h/nginx-reverse-proxy"
     restart: unless-stopped
     volumes:
       - nginx_config:/etc/nginx/

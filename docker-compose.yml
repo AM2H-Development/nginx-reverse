@@ -13,6 +13,8 @@ services:
   nginx:
     image: "nginx:stable-alpine"
     restart: unless-stopped
+    volumes:
+      - nginx_config:/etc/nginx/
     ports:
       - "8188:80"
     networks:

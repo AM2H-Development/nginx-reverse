@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     volumes:
       - theia_data:/home/project:cached
+    ports:
+      - "3001:3001"
+      - "3002:3002"
     networks:
       reverse-proxy:
         aliases:

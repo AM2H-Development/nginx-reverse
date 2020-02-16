@@ -4,6 +4,6 @@ install:
 * cd theia
 * docker-compose up -d
 
-create user for Auth:
+create user for Basic Auth:
 * docker exec -it theia_nginx_1 sh
 * htpasswd /etc/nginx/htpasswd/.htpasswd user [pw] 

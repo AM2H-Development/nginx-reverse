@@ -6,8 +6,8 @@ services:
     volumes:
       - theia_data:/home/project:cached
     ports:
-      - "3001:3001"
-      - "3002:3002"
+      - "4001:4001"
+      - "4002:4002"
     networks:
       reverse-proxy:
         aliases:
@@ -19,7 +19,8 @@ services:
     volumes:
       - nginx_config:/etc/nginx/
     ports:
-      - "8188:80"
+      - "80:80"
+      - "443:443"
     networks:
       - reverse-proxy
       

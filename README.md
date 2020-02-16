@@ -6,4 +6,4 @@ install:
 
 create user for Auth:
 * docker exec -it theia_nginx_1 sh
-* htpasswd -c /etc/nginx/htpasswd/.htpasswd user [pw] 
+* htpasswd /etc/nginx/htpasswd/.htpasswd user [pw] 

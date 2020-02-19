@@ -13,3 +13,7 @@ modify nginx.conf to your needs:
 * copy cert and privkey to container (e.g. docker cp cert.pem theia_nginx_1:/etc/nginx/)
 
 Theia ide is avalable at https://yourserver.tld:4444
+
+open ports for running apps:
+* 4001 - HTTPS
+* 4002 - HTTPS + Basic Auth

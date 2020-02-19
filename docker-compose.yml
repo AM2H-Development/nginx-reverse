@@ -5,9 +5,6 @@ services:
     restart: unless-stopped
     volumes:
       - theia_data:/home/project:cached
-    ports:
-      - "4001:4001"
-      - "4002:4002"
     networks:
       reverse-proxy:
         aliases:
@@ -20,6 +17,8 @@ services:
       - nginx_config:/etc/nginx/
     ports:
       - "4444:4444"
+      - "4001:4001"
+      - "4002:4002"
     networks:
       - reverse-proxy
       

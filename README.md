@@ -7,3 +7,5 @@ install:
 create user for Basic Auth:
 * docker exec -it theia_nginx_1 sh
 * htpasswd /etc/nginx/htpasswd/.htpasswd user [pw] 
+
+Theia ide is avalable at https://yourserver.tld:4444

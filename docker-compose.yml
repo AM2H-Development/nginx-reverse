@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   nginx:
-    image: "am2h/nginx-reverse-proxy"
+    image: "am2h/nginx-reverse-proxy:latest"
     restart: unless-stopped
     volumes:
       - nginx_config:/etc/nginx/
@@ -13,7 +13,7 @@ services:
       - reverse-proxy
 
   theia:
-    image: "theiaide/theia" 
+    image: "theiaide/theia:latest" 
     restart: unless-stopped
     volumes:
       - theia_data:/home/project:cached

@@ -17,3 +17,6 @@ Theia ide is avalable at https://yourserver.tld:4444
 open ports for running apps:
 * 4001 - HTTPS
 * 4002 - HTTPS + Basic Auth
+
+open port for portainer, etc.
+* 9091 - HTTPS

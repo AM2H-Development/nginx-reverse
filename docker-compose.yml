@@ -1,15 +1,5 @@
 version: "3.7"
 services:
-  theia:
-    image: "theiaide/theia" 
-    restart: unless-stopped
-    volumes:
-      - theia_data:/home/project:cached
-    networks:
-      reverse-proxy:
-        aliases:
-          - theia
-
   nginx:
     image: "am2h/nginx-reverse-proxy"
     restart: unless-stopped
@@ -21,6 +11,16 @@ services:
       - "4002:4002"
     networks:
       - reverse-proxy
+
+  theia:
+    image: "theiaide/theia" 
+    restart: unless-stopped
+    volumes:
+      - theia_data:/home/project:cached
+    networks:
+      reverse-proxy:
+        aliases:
+          - theia
       
 volumes:
   theia_data:

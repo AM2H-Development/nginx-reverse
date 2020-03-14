@@ -4,11 +4,14 @@ install:
 * cd nginx-reverse
 * docker-compose up -d
 
-modify nginx.conf to your needs:
+modify nginx.conf (on you local container) to your needs:
 * your "server_name" and port and if ssl:
 * copy cert and privkey to container (e.g.):
   * docker cp privkey1.pem nginx-reverse_nginx_1:/etc/nginx/)
   * docker cp fullchain1.pem nginx-reverse_nginx_1:/etc/nginx/)
+
+add Portainer to your docker network:
+* docker network connect reverse-proxy Portainer
 
 open port for portainer on your router:
 * 9091 - HTTPS

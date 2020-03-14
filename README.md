@@ -11,7 +11,7 @@ modify nginx.conf (on you local container) to your needs:
   * docker cp fullchain1.pem nginx-reverse_nginx_1:/etc/nginx/)
 
 add Portainer to your docker network:
-* docker network connect reverse-proxy Portainer
+* docker network connect 	nginx-reverse_reverse-proxy portainer
 
 open port for portainer on your router:
 * 9091 - HTTPS

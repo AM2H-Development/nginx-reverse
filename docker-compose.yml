@@ -6,25 +6,11 @@ services:
     volumes:
       - nginx_config:/etc/nginx/
     ports:
-      - "4444:4444"
-      - "4001:4001"
-      - "4002:4002"
       - "9091:9091"
     networks:
       - reverse-proxy
-
-  theia:
-    image: "theiaide/theia:latest" 
-    restart: unless-stopped
-    volumes:
-      - theia_data:/home/project:cached
-    networks:
-      reverse-proxy:
-        aliases:
-          - theia
       
 volumes:
-  theia_data:
   nginx_config:
   
 networks:

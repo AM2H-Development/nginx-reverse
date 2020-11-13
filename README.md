@@ -15,3 +15,5 @@ add Portainer to your docker network:
 
 open port for portainer on your router:
 * 9091 - HTTPS
+
+build 20/13/11

@@ -1,6 +1,6 @@
 # Nginx as reverse-proxy (e.g. for Portainer)
 install (docker run):
-docker run -d -p 9092:9092 -v nginx-reverse_nginx_2_config:/etc/nginx --name influx_reverse am2h/nginx-reverse-proxy:latest
+* docker run -d -p 9092:9092 -v nginx-reverse_nginx_2_config:/etc/nginx --name influx_reverse am2h/nginx-reverse-proxy:latest
 
 install (docker-compose):
 * git clone https://github.com/AM2H-Development/nginx-reverse.git
